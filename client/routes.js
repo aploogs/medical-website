@@ -3,16 +3,17 @@ import { Route, IndexRoute } from 'react-router';
 import App from './containers/App';
 import NotFound from './components/NotFound';
 import About from './components/About';
-import Courses from './components/Courses';
-import Course from './components/Course';
+import Providers from './components/Providers';
+import Provider from './components/Provider';
 import Info from './components/Info';
+import Job from './components/Jobs';
 
 export default (
   <Route>
     <Route path="/" component={App} />
-    <IndexRoute component={Courses} />
-    <Route path="/about" component={About} />
-    <Route path="/course/:id" component={Course} />
+    <IndexRoute component={Jobs} />
+    <Route path="/providers" component={Providers} />
+    <Route path="/course/:id" component={Job} />
     <Route path="/info" component={Info} />
     <Route path="*" component={NotFound} />
   </Route>
