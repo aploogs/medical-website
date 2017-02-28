@@ -8,7 +8,7 @@ var mongoose = require('mongoose');
 mongoose.connect( 'mongodb://localhost/react-starter' );
 
 var routes = require('./routes/index');
-var courses = require('./routes/courses');
+var jobs = require('./routes/jobs');
 
 var app = express();
 
@@ -34,7 +34,7 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
-app.use('/api/courses', courses);
+app.use('/api/jobs', jobs);
 
 app.use('*', routes);
 
